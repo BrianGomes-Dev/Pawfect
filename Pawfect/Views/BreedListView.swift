@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct BreedListView: View {
+    
+    @StateObject private var viewModel = BreedListViewModel()
+    
     var body: some View {
-        Text("Breed List")
+        List(viewModel.breeds ?? [], id: \.id) { breed in
+            
+            Text(breed.name)
+        }
+        .onAppear{
+            viewModel.fetchBreeds()
+        }
     }
 }
 
-#Preview {
-    BreedListView()
+struct BreedListView_Previews: PreviewProvider {
+    static var previews: some View {
+        BreedListView()
+    }
 }
