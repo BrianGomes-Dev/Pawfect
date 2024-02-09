@@ -94,9 +94,17 @@
 		D35882282B76AE7400206BB9 /* Pawfect */ = {
 			isa = PBXGroup;
 			children = (
-				D35882292B76AE7400206BB9 /* PawfectApp.swift */,
-				D358822B2B76AE7400206BB9 /* ContentView.swift */,
-				D358822D2B76AE7500206BB9 /* Assets.xcassets */,
+				D358825E2B76AF7A00206BB9 /* App */,
+				D358825C2B76AF1600206BB9 /* Utilities */,
+				D358825B2B76AF0300206BB9 /* Environments */,
+				D358825A2B76AEFB00206BB9 /* Reducers */,
+				D35882592B76AEF000206BB9 /* Actions */,
+				D35882582B76AECA00206BB9 /* State */,
+				D35882572B76AEBF00206BB9 /* ViewModels */,
+				D35882562B76AEB800206BB9 /* Views */,
+				D35882552B76AEB000206BB9 /* Models */,
+				D35882542B76AEA800206BB9 /* Resources */,
+				D35882532B76AE9F00206BB9 /* Networking */,
 				D358822F2B76AE7500206BB9 /* Preview Content */,
 			);
 			path = Pawfect;
@@ -125,6 +133,86 @@
 				D35882462B76AE7500206BB9 /* PawfectUITestsLaunchTests.swift */,
 			);
 			path = PawfectUITests;
+			sourceTree = "<group>";
+		};
+		D35882532B76AE9F00206BB9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D35882542B76AEA800206BB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D358822D2B76AE7500206BB9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D35882552B76AEB000206BB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D35882562B76AEB800206BB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D358822B2B76AE7400206BB9 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D35882572B76AEBF00206BB9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D35882582B76AECA00206BB9 /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		D35882592B76AEF000206BB9 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		D358825A2B76AEFB00206BB9 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		D358825B2B76AF0300206BB9 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		D358825C2B76AF1600206BB9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D358825E2B76AF7A00206BB9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D35882292B76AE7400206BB9 /* PawfectApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
