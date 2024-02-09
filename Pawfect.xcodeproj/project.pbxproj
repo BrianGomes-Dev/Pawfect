@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30B35682B76B1AC007AEEE3 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B35672B76B1AC007AEEE3 /* Breed.swift */; };
+		D30B356A2B76B214007AEEE3 /* DogAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B35692B76B214007AEEE3 /* DogAPIService.swift */; };
+		D30B356F2B76B553007AEEE3 /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B356E2B76B553007AEEE3 /* BreedListView.swift */; };
 		D358822A2B76AE7400206BB9 /* PawfectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35882292B76AE7400206BB9 /* PawfectApp.swift */; };
 		D358822C2B76AE7400206BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358822B2B76AE7400206BB9 /* ContentView.swift */; };
 		D358822E2B76AE7500206BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D358822D2B76AE7500206BB9 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D30B35672B76B1AC007AEEE3 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		D30B35692B76B214007AEEE3 /* DogAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPIService.swift; sourceTree = "<group>"; };
+		D30B356E2B76B553007AEEE3 /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
 		D35882262B76AE7400206BB9 /* Pawfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pawfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35882292B76AE7400206BB9 /* PawfectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawfectApp.swift; sourceTree = "<group>"; };
 		D358822B2B76AE7400206BB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		D35882532B76AE9F00206BB9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D30B35692B76B214007AEEE3 /* DogAPIService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 		D35882552B76AEB000206BB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D30B35672B76B1AC007AEEE3 /* Breed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D358822B2B76AE7400206BB9 /* ContentView.swift */,
+				D30B356E2B76B553007AEEE3 /* BreedListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,8 +354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30B35682B76B1AC007AEEE3 /* Breed.swift in Sources */,
+				D30B356F2B76B553007AEEE3 /* BreedListView.swift in Sources */,
 				D358822C2B76AE7400206BB9 /* ContentView.swift in Sources */,
 				D358822A2B76AE7400206BB9 /* PawfectApp.swift in Sources */,
+				D30B356A2B76B214007AEEE3 /* DogAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
