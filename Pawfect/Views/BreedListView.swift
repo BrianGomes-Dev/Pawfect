@@ -1,24 +1,34 @@
-//
-//  BreedListView.swift
-//  Pawfect
-//
-//  Created by Brian Gomes on 09/02/2024.
-//
-
 import SwiftUI
 
 struct BreedListView: View {
-    
     @StateObject private var viewModel = BreedListViewModel()
+    @State private var selectedBreed: Breed?
+    @State private var isShowingDogImages = false
+    @StateObject private var dogImageViewModel = DogImageViewModel()
     
     var body: some View {
         List(viewModel.breeds ?? [], id: \.id) { breed in
-            
-            Text(breed.name)
+            Button(action: {
+                selectedBreed = breed
+                fetchDogImages(for: breed.name)
+            }) {
+                Text(breed.name)
+            }
         }
-        .onAppear{
+        .sheet(isPresented: $isShowingDogImages) {
+            DogImagesView(imageURLs: dogImageViewModel.imageURLs)
+           
+        }
+        .navigationTitle("Dog Breeds")
+        .onAppear {
             viewModel.fetchBreeds()
         }
+    }
+    
+    private func fetchDogImages(for breed: String) {
+        dogImageViewModel.fetchDogImages(for: breed)
+        isShowingDogImages = true
+        print("\(dogImageViewModel.imageURLs.count)")
     }
 }
 
