@@ -12,9 +12,7 @@ struct BreedRowView: View {
     
     var body: some View {
         HStack {
-            // Add breed icon or image here
-            // For example:
-            Image(systemName: "circle.fill") // Replace with actual breed icon or image
+            Image(systemName: "circle.fill")
                 .foregroundColor(randomColor())
                 .frame(width: 24, height: 24)
             

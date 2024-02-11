@@ -4,7 +4,6 @@ struct BreedListView: View {
     @StateObject private var viewModel = BreedListViewModel()
     @StateObject private var dogImageViewModel = DogImageViewModel()
     @State private var selectedBreed: Breed?
-    @State private var isShowingDogImages = false
     @State private var searchText = ""
     @State private var listItemOpacity: [Double]?
    
@@ -14,15 +13,22 @@ struct BreedListView: View {
         List {
             ForEach(filteredBreeds.indices, id: \.self) { index in
                 let breed = filteredBreeds[index]
-                Button(action: {
-                    selectedBreed = breed
-                    fetchDogImages(for: breed.name)
-                }) {
-                    BreedRowView(breed: breed)
-                        .opacity(listItemOpacity?[index] ?? 0)
-                        .animation(Animation.easeInOut(duration: 1).delay(Double(index) * 0.01), value: UUID())
-                        
+                
+                ZStack {
+                    NavigationLink(destination: DogImagesView(imageURLs: dogImageViewModel.imageURLs)) {
+                        EmptyView()
+                    }
+                    .opacity(0.0)
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    HStack {
+                        BreedRowView(breed: breed)
+                            .opacity(listItemOpacity?[index] ?? 0)
+                            .animation(Animation.easeInOut(duration: 1).delay(Double(index) * 0.01), value: UUID())
+                    }
+                    
                 }
+               
                 .onAppear {
                     if listItemOpacity == nil {
                         listItemOpacity = Array(repeating: 0.0, count: filteredBreeds.count)
@@ -32,14 +38,8 @@ struct BreedListView: View {
                         listItemOpacity?[index] = 1
                     }
                 }
-                
+                .listRowSeparator(.hidden)
             }
-            .listRowSeparator(.hidden)
-            
-        }
-        .sheet(isPresented: $isShowingDogImages) {
-            DogImagesView(imageURLs: dogImageViewModel.imageURLs)
-                
         }
         .listRowInsets(.none)
         .scrollIndicators(.hidden)
@@ -56,11 +56,6 @@ struct BreedListView: View {
     private func fetchBreeds() {
         viewModel.fetchBreeds()
     }
-    
-    private func fetchDogImages(for breed: String) {
-        dogImageViewModel.fetchDogImages(for: breed)
-        isShowingDogImages = true
-    }
 }
 
 struct BreedListView_Previews: PreviewProvider {
@@ -68,3 +63,5 @@ struct BreedListView_Previews: PreviewProvider {
         BreedListView()
     }
 }
+ 
+
