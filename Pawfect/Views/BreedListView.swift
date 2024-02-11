@@ -18,9 +18,10 @@ struct BreedListView: View {
                     selectedBreed = breed
                     fetchDogImages(for: breed.name)
                 }) {
-                    Text(breed.name)
+                    BreedRowView(breed: breed)
                         .opacity(listItemOpacity?[index] ?? 0)
-                        .animation(Animation.easeInOut(duration: 1).delay(Double(index) * 0.01))
+                        .animation(Animation.easeInOut(duration: 1).delay(Double(index) * 0.01), value: UUID())
+                        
                 }
                 .onAppear {
                     if listItemOpacity == nil {
@@ -31,12 +32,16 @@ struct BreedListView: View {
                         listItemOpacity?[index] = 1
                     }
                 }
+                
             }
+            .listRowSeparator(.hidden)
+            
         }
         .sheet(isPresented: $isShowingDogImages) {
             DogImagesView(imageURLs: dogImageViewModel.imageURLs)
                 
         }
+        .listRowInsets(.none)
         .scrollIndicators(.hidden)
         .navigationTitle("Dog Breeds")
         .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: "Hound")
