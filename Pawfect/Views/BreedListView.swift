@@ -2,33 +2,59 @@ import SwiftUI
 
 struct BreedListView: View {
     @StateObject private var viewModel = BreedListViewModel()
+    @StateObject private var dogImageViewModel = DogImageViewModel()
     @State private var selectedBreed: Breed?
     @State private var isShowingDogImages = false
-    @StateObject private var dogImageViewModel = DogImageViewModel()
-    
+    @State private var searchText = ""
+    @State private var listItemOpacity: [Double]?
+   
     var body: some View {
-        List(viewModel.breeds ?? [], id: \.id) { breed in
-            Button(action: {
-                selectedBreed = breed
-                fetchDogImages(for: breed.name)
-            }) {
-                Text(breed.name)
+        let filteredBreeds = viewModel.filterBreeds(for: searchText)
+        
+        List {
+            ForEach(filteredBreeds.indices, id: \.self) { index in
+                let breed = filteredBreeds[index]
+                Button(action: {
+                    selectedBreed = breed
+                    fetchDogImages(for: breed.name)
+                }) {
+                    Text(breed.name)
+                        .opacity(listItemOpacity?[index] ?? 0)
+                        .animation(Animation.easeInOut(duration: 1).delay(Double(index) * 0.01))
+                }
+                .onAppear {
+                    if listItemOpacity == nil {
+                        listItemOpacity = Array(repeating: 0.0, count: filteredBreeds.count)
+                    }
+                    
+                    withAnimation(.easeInOut(duration: 1)) {
+                        listItemOpacity?[index] = 1
+                    }
+                }
             }
         }
         .sheet(isPresented: $isShowingDogImages) {
             DogImagesView(imageURLs: dogImageViewModel.imageURLs)
-           
+                
         }
+        .scrollIndicators(.hidden)
         .navigationTitle("Dog Breeds")
-        .onAppear {
-            viewModel.fetchBreeds()
+        .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: "Hound")
+        .refreshable {
+            fetchBreeds()
         }
+        .onAppear {
+            fetchBreeds()
+        }
+    }
+    
+    private func fetchBreeds() {
+        viewModel.fetchBreeds()
     }
     
     private func fetchDogImages(for breed: String) {
         dogImageViewModel.fetchDogImages(for: breed)
         isShowingDogImages = true
-        print("\(dogImageViewModel.imageURLs.count)")
     }
 }
 

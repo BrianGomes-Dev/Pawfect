@@ -15,9 +15,6 @@ struct DogImagesView: View {
         
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 10) {
-                
-              //  ForEach
-                
                 ForEach(imageURLs, id: \.self) { url in
                     
                     AsyncImage(url: url) { phase in
@@ -31,16 +28,18 @@ struct DogImagesView: View {
                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                 .frame(width: 150, height: 150)
                                 .cornerRadius(20)
-                        case .failure(let error):
+                        case .failure(_):
+                            ProgressView()
+                        @unknown default:
                             ProgressView()
                         }
                         
                     }
                     
                 }
-          
-
-            
+                
+                
+                
             }
             .padding()
         }

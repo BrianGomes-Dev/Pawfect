@@ -20,4 +20,18 @@ class BreedListViewModel: ObservableObject {
             }
         }
     }
+    
+    func filterBreeds(for searchText: String) -> [Breed] {
+        
+        guard let breeds = breeds else {
+            return []
+        }
+        
+        if !searchText.isEmpty {
+            return breeds.filter { $0.name.lowercased().contains(searchText.lowercased())}
+        } else {
+            return breeds
+        }
+        
+    }
 }
