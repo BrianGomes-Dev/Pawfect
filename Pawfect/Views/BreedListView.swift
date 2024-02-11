@@ -2,7 +2,6 @@ import SwiftUI
 
 struct BreedListView: View {
     @StateObject private var viewModel = BreedListViewModel()
-    @StateObject private var dogImageViewModel = DogImageViewModel()
     @State private var selectedBreed: Breed?
     @State private var searchText = ""
     @State private var listItemOpacity: [Double]?
@@ -15,20 +14,17 @@ struct BreedListView: View {
                 let breed = filteredBreeds[index]
                 
                 ZStack {
-                    NavigationLink(destination: DogImagesView(imageURLs: dogImageViewModel.imageURLs)) {
+                    NavigationLink(destination: DogImagesView(breed: filteredBreeds[index]) ) {
                         EmptyView()
                     }
                     .opacity(0.0)
                     .buttonStyle(PlainButtonStyle())
-                    
                     HStack {
                         BreedRowView(breed: breed)
                             .opacity(listItemOpacity?[index] ?? 0)
                             .animation(Animation.easeInOut(duration: 1).delay(Double(index) * 0.01), value: UUID())
                     }
-                    
                 }
-               
                 .onAppear {
                     if listItemOpacity == nil {
                         listItemOpacity = Array(repeating: 0.0, count: filteredBreeds.count)
@@ -63,5 +59,3 @@ struct BreedListView_Previews: PreviewProvider {
         BreedListView()
     }
 }
- 
-

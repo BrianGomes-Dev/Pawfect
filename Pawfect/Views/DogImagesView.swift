@@ -1,31 +1,27 @@
-//
-//  DogImagesView.swift
-//  Pawfect
-//
-//  Created by Brian Gomes on 09/02/2024.
-//
-
 import SwiftUI
 
 struct DogImagesView: View {
     
-    let imageURLs: [URL]
+    @ObservedObject var viewModel = DogImageViewModel()
+    let breed: Breed
+    
+    init(breed: Breed) {
+        self.breed = breed
+        viewModel.fetchDogImages(for: breed.name)
+    }
     
     var body: some View {
-        
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 10) {
-                ForEach(imageURLs, id: \.self) { url in
-                    
+                ForEach(viewModel.imageURLs, id: \.self) { url in
                     AsyncImage(url: url) { phase in
-                        
                         switch phase {
                         case .empty:
                             ProgressView()
                         case .success(let image):
                             image
                                 .resizable()
-                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                .aspectRatio(contentMode: .fill)
                                 .frame(width: 150, height: 150)
                                 .cornerRadius(20)
                         case .failure(_):
@@ -33,22 +29,19 @@ struct DogImagesView: View {
                         @unknown default:
                             ProgressView()
                         }
-                        
                     }
-                    
                 }
-                
-                
-                
             }
             .padding()
         }
-        .navigationTitle("BreedName")
+        .navigationTitle(breed.name)
         .navigationBarTitleDisplayMode(.large)
     }
 }
 
-#Preview {
-    let url = URL(string: "https://images.dog.ceo/breeds/hound-walker/n02089867_1882.jpg")!
-    return DogImagesView(imageURLs: [url])
+struct DogImagesView_Previews: PreviewProvider {
+    static var previews: some View {
+        let breed = Breed(id: "001", name: "Labrador Retriever", subBreeds: [])
+        DogImagesView(breed: breed)
+    }
 }
