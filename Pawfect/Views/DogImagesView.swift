@@ -1,3 +1,10 @@
+//
+//  PawfectApp.swift
+//  Pawfect
+//
+//  Created by Brian Gomes on 09/02/2024.
+//
+
 import SwiftUI
 
 struct DogImagesView: View {
@@ -29,11 +36,10 @@ struct DogImagesView: View {
                                 .accessibility(label: Text("Dog image of breed: \(breed.name)"))
                                 .accessibility(addTraits: .isImage)
                         case .failure(_):
-                            Image(systemName: "exclamationmark.triangle.fill")
+                            Image(systemName: "exclamationmark.triangle")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 150, height: 150)
-                                .cornerRadius(20)
                                 .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 4)
                                 .accessibility(label: Text("Failed to load image of breed: \(breed.name)"))
                                 .accessibility(addTraits: .isImage)

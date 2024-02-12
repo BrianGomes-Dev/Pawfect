@@ -32,6 +32,5 @@ class BreedListViewModel: ObservableObject {
         } else {
             return breeds
         }
-        
     }
 }

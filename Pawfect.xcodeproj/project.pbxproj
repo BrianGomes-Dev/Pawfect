@@ -14,24 +14,17 @@
 		D30B35732B76BF7B007AEEE3 /* DogImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B35722B76BF7B007AEEE3 /* DogImagesView.swift */; };
 		D30B35752B76C439007AEEE3 /* DogImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B35742B76C439007AEEE3 /* DogImageViewModel.swift */; };
 		D30B35772B790696007AEEE3 /* BreedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B35762B790696007AEEE3 /* BreedRowView.swift */; };
+		D30B357A2B7A75C5007AEEE3 /* BreedListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B35792B7A75C5007AEEE3 /* BreedListViewModelTests.swift */; };
+		D30B357C2B7A75FC007AEEE3 /* DogImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B357B2B7A75FC007AEEE3 /* DogImageResponse.swift */; };
 		D358822A2B76AE7400206BB9 /* PawfectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35882292B76AE7400206BB9 /* PawfectApp.swift */; };
 		D358822C2B76AE7400206BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358822B2B76AE7400206BB9 /* ContentView.swift */; };
 		D358822E2B76AE7500206BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D358822D2B76AE7500206BB9 /* Assets.xcassets */; };
 		D35882312B76AE7500206BB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35882302B76AE7500206BB9 /* Preview Assets.xcassets */; };
-		D358823B2B76AE7500206BB9 /* PawfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358823A2B76AE7500206BB9 /* PawfectTests.swift */; };
-		D35882452B76AE7500206BB9 /* PawfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35882442B76AE7500206BB9 /* PawfectUITests.swift */; };
-		D35882472B76AE7500206BB9 /* PawfectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35882462B76AE7500206BB9 /* PawfectUITestsLaunchTests.swift */; };
+		D358823B2B76AE7500206BB9 /* DogImageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358823A2B76AE7500206BB9 /* DogImageViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		D35882372B76AE7500206BB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D358821E2B76AE7400206BB9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D35882252B76AE7400206BB9;
-			remoteInfo = Pawfect;
-		};
-		D35882412B76AE7500206BB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D358821E2B76AE7400206BB9 /* Project object */;
 			proxyType = 1;
@@ -48,16 +41,15 @@
 		D30B35722B76BF7B007AEEE3 /* DogImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImagesView.swift; sourceTree = "<group>"; };
 		D30B35742B76C439007AEEE3 /* DogImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageViewModel.swift; sourceTree = "<group>"; };
 		D30B35762B790696007AEEE3 /* BreedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRowView.swift; sourceTree = "<group>"; };
+		D30B35792B7A75C5007AEEE3 /* BreedListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModelTests.swift; sourceTree = "<group>"; };
+		D30B357B2B7A75FC007AEEE3 /* DogImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageResponse.swift; sourceTree = "<group>"; };
 		D35882262B76AE7400206BB9 /* Pawfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pawfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35882292B76AE7400206BB9 /* PawfectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawfectApp.swift; sourceTree = "<group>"; };
 		D358822B2B76AE7400206BB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D358822D2B76AE7500206BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35882302B76AE7500206BB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D35882362B76AE7500206BB9 /* PawfectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawfectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D358823A2B76AE7500206BB9 /* PawfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawfectTests.swift; sourceTree = "<group>"; };
-		D35882402B76AE7500206BB9 /* PawfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawfectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D35882442B76AE7500206BB9 /* PawfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawfectUITests.swift; sourceTree = "<group>"; };
-		D35882462B76AE7500206BB9 /* PawfectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawfectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D358823A2B76AE7500206BB9 /* DogImageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +67,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D358823D2B76AE7500206BB9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,7 +75,6 @@
 			children = (
 				D35882282B76AE7400206BB9 /* Pawfect */,
 				D35882392B76AE7500206BB9 /* PawfectTests */,
-				D35882432B76AE7500206BB9 /* PawfectUITests */,
 				D35882272B76AE7400206BB9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +84,6 @@
 			children = (
 				D35882262B76AE7400206BB9 /* Pawfect.app */,
 				D35882362B76AE7500206BB9 /* PawfectTests.xctest */,
-				D35882402B76AE7500206BB9 /* PawfectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,11 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				D358825E2B76AF7A00206BB9 /* App */,
-				D358825C2B76AF1600206BB9 /* Utilities */,
-				D358825B2B76AF0300206BB9 /* Environments */,
-				D358825A2B76AEFB00206BB9 /* Reducers */,
-				D35882592B76AEF000206BB9 /* Actions */,
-				D35882582B76AECA00206BB9 /* State */,
 				D35882572B76AEBF00206BB9 /* ViewModels */,
 				D35882562B76AEB800206BB9 /* Views */,
 				D35882552B76AEB000206BB9 /* Models */,
@@ -135,18 +113,10 @@
 		D35882392B76AE7500206BB9 /* PawfectTests */ = {
 			isa = PBXGroup;
 			children = (
-				D358823A2B76AE7500206BB9 /* PawfectTests.swift */,
+				D358823A2B76AE7500206BB9 /* DogImageViewModelTests.swift */,
+				D30B35792B7A75C5007AEEE3 /* BreedListViewModelTests.swift */,
 			);
 			path = PawfectTests;
-			sourceTree = "<group>";
-		};
-		D35882432B76AE7500206BB9 /* PawfectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D35882442B76AE7500206BB9 /* PawfectUITests.swift */,
-				D35882462B76AE7500206BB9 /* PawfectUITestsLaunchTests.swift */,
-			);
-			path = PawfectUITests;
 			sourceTree = "<group>";
 		};
 		D35882532B76AE9F00206BB9 /* Networking */ = {
@@ -169,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				D30B35672B76B1AC007AEEE3 /* Breed.swift */,
+				D30B357B2B7A75FC007AEEE3 /* DogImageResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,41 +162,6 @@
 				D30B35742B76C439007AEEE3 /* DogImageViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		D35882582B76AECA00206BB9 /* State */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = State;
-			sourceTree = "<group>";
-		};
-		D35882592B76AEF000206BB9 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
-		D358825A2B76AEFB00206BB9 /* Reducers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reducers;
-			sourceTree = "<group>";
-		};
-		D358825B2B76AF0300206BB9 /* Environments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Environments;
-			sourceTree = "<group>";
-		};
-		D358825C2B76AF1600206BB9 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		D358825E2B76AF7A00206BB9 /* App */ = {
@@ -274,24 +210,6 @@
 			productReference = D35882362B76AE7500206BB9 /* PawfectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D358823F2B76AE7500206BB9 /* PawfectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D35882502B76AE7500206BB9 /* Build configuration list for PBXNativeTarget "PawfectUITests" */;
-			buildPhases = (
-				D358823C2B76AE7500206BB9 /* Sources */,
-				D358823D2B76AE7500206BB9 /* Frameworks */,
-				D358823E2B76AE7500206BB9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D35882422B76AE7500206BB9 /* PBXTargetDependency */,
-			);
-			name = PawfectUITests;
-			productName = PawfectUITests;
-			productReference = D35882402B76AE7500206BB9 /* PawfectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -306,10 +224,6 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					D35882352B76AE7500206BB9 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = D35882252B76AE7400206BB9;
-					};
-					D358823F2B76AE7500206BB9 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = D35882252B76AE7400206BB9;
 					};
@@ -330,7 +244,6 @@
 			targets = (
 				D35882252B76AE7400206BB9 /* Pawfect */,
 				D35882352B76AE7500206BB9 /* PawfectTests */,
-				D358823F2B76AE7500206BB9 /* PawfectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,13 +265,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D358823E2B76AE7500206BB9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -367,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D30B35772B790696007AEEE3 /* BreedRowView.swift in Sources */,
+				D30B357C2B7A75FC007AEEE3 /* DogImageResponse.swift in Sources */,
 				D30B35682B76B1AC007AEEE3 /* Breed.swift in Sources */,
 				D30B356F2B76B553007AEEE3 /* BreedListView.swift in Sources */,
 				D30B35732B76BF7B007AEEE3 /* DogImagesView.swift in Sources */,
@@ -382,16 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D358823B2B76AE7500206BB9 /* PawfectTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D358823C2B76AE7500206BB9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D35882452B76AE7500206BB9 /* PawfectUITests.swift in Sources */,
-				D35882472B76AE7500206BB9 /* PawfectUITestsLaunchTests.swift in Sources */,
+				D358823B2B76AE7500206BB9 /* DogImageViewModelTests.swift in Sources */,
+				D30B357A2B7A75C5007AEEE3 /* BreedListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,11 +301,6 @@
 			isa = PBXTargetDependency;
 			target = D35882252B76AE7400206BB9 /* Pawfect */;
 			targetProxy = D35882372B76AE7500206BB9 /* PBXContainerItemProxy */;
-		};
-		D35882422B76AE7500206BB9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D35882252B76AE7400206BB9 /* Pawfect */;
-			targetProxy = D35882412B76AE7500206BB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -628,42 +522,6 @@
 			};
 			name = Release;
 		};
-		D35882512B76AE7500206BB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8N6548NG99;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.briangomes.Pawfect.PawfectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Pawfect;
-			};
-			name = Debug;
-		};
-		D35882522B76AE7500206BB9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8N6548NG99;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.briangomes.Pawfect.PawfectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Pawfect;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -690,15 +548,6 @@
 			buildConfigurations = (
 				D358824E2B76AE7500206BB9 /* Debug */,
 				D358824F2B76AE7500206BB9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D35882502B76AE7500206BB9 /* Build configuration list for PBXNativeTarget "PawfectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D35882512B76AE7500206BB9 /* Debug */,
-				D35882522B76AE7500206BB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

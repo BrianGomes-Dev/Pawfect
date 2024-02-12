@@ -33,8 +33,3 @@ class DogImageViewModel: ObservableObject {
     }
 
 }
-
-struct DogImageResponse: Codable {
-    let message: [String]
-    let status: String
-}
