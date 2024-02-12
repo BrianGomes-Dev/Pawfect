@@ -8,6 +8,11 @@ Pawfect is an iOS app designed to bring joy to dog enthusiasts by providing acce
 
 ## Screenshots
 
+https://github.com/BrianGomes-Dev/Pawfect/assets/68696633/976a5726-9288-4c8b-acbb-4187ee97463a
+
+<img src="https://github.com/BrianGomes-Dev/Pawfect/assets/68696633/9757acfc-3a78-4024-9eb1-e587485b4536" width="300">
+<img src="https://github.com/BrianGomes-Dev/Pawfect/assets/68696633/6cbb4618-f883-4645-8e39-f24185edd4dc" width="300">
+<img src="https://github.com/BrianGomes-Dev/Pawfect/assets/68696633/399d4006-db4b-45b7-a104-93a3b26d8a27" width="300">
 
 ## MVVM Architecture
 
