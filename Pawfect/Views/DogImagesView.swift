@@ -12,7 +12,7 @@ struct DogImagesView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 10) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 24) {
                 ForEach(viewModel.imageURLs, id: \.self) { url in
                     AsyncImage(url: url) { phase in
                         switch phase {
@@ -24,6 +24,7 @@ struct DogImagesView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 150, height: 150)
                                 .cornerRadius(20)
+                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 4)
                         case .failure(_):
                             ProgressView()
                         @unknown default:
@@ -34,6 +35,7 @@ struct DogImagesView: View {
             }
             .padding()
         }
+        .scrollIndicators(.hidden)
         .navigationTitle(breed.name)
         .navigationBarTitleDisplayMode(.large)
     }
@@ -41,7 +43,7 @@ struct DogImagesView: View {
 
 struct DogImagesView_Previews: PreviewProvider {
     static var previews: some View {
-        let breed = Breed(id: "001", name: "Labrador Retriever", subBreeds: [])
+        let breed = Breed(id: "001", name: "Collie", subBreeds: [])
         DogImagesView(breed: breed)
     }
 }
