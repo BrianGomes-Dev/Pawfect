@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             BreedListView()
-                .navigationTitle("Dogs List")
+                .accessibility(label: Text("Dogs Breeds"))
         }
     }
 }

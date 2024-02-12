@@ -18,6 +18,7 @@ struct DogImagesView: View {
                         switch phase {
                         case .empty:
                             ProgressView()
+                                .accessibility(label: Text("Loading image of breed: \(breed.name)"))
                         case .success(let image):
                             image
                                 .resizable()
@@ -25,8 +26,17 @@ struct DogImagesView: View {
                                 .frame(width: 150, height: 150)
                                 .cornerRadius(20)
                                 .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 4)
+                                .accessibility(label: Text("Dog image of breed: \(breed.name)"))
+                                .accessibility(addTraits: .isImage)
                         case .failure(_):
-                            ProgressView()
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 150, height: 150)
+                                .cornerRadius(20)
+                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 4)
+                                .accessibility(label: Text("Failed to load image of breed: \(breed.name)"))
+                                .accessibility(addTraits: .isImage)
                         @unknown default:
                             ProgressView()
                         }

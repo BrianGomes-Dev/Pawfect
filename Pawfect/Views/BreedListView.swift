@@ -2,7 +2,6 @@ import SwiftUI
 
 struct BreedListView: View {
     @StateObject private var viewModel = BreedListViewModel()
-    @State private var selectedBreed: Breed?
     @State private var searchText = ""
     @State private var listItemOpacity: [Double]?
    
@@ -19,10 +18,14 @@ struct BreedListView: View {
                     }
                     .opacity(0.0)
                     .buttonStyle(PlainButtonStyle())
+                    .accessibility(hidden: true)
+                    
                     HStack {
                         BreedRowView(breed: breed)
                             .opacity(listItemOpacity?[index] ?? 0)
                             .animation(Animation.easeInOut(duration: 1).delay(Double(index) * 0.01), value: UUID())
+                            .accessibility(label: Text("Breed: \(breed.name)"))
+                            .accessibility(hint: Text("Tap to view images of \(breed.name)"))
                     }
                 }
                 .onAppear {
@@ -40,7 +43,7 @@ struct BreedListView: View {
         .listRowInsets(.none)
         .scrollIndicators(.hidden)
         .navigationTitle("Dog Breeds")
-        .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: "Hound")
+        .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: "Search for a breed")
         .refreshable {
             fetchBreeds()
         }
